@@ -1,6 +1,7 @@
 var img = document.getElementById('profile-img');
 const cursor = document.querySelector('.cursor');
 var timeout;
+const listitems = document.querySelectorAll('a');
 
 function nav()
 {
@@ -36,3 +37,9 @@ document.addEventListener('mouseout' , () =>
 {
    cursor.style.display = 'none';
 });
+
+//animasyon
+listitems.forEach((item,index) =>
+{
+   item.style.animation = `movedown 1s ease-in-out forwards ${index / 5}s`;
+})
